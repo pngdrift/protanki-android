@@ -1,0 +1,37 @@
+{
+  "config": "airmobile",
+  "compilerOptions": {
+    "source-path": [
+      "src"
+    ],
+    "library-path": [],
+    "default-background-color": "#000000",
+    "output": "bin/protanki-android.swf"
+  },
+  "application": "src/ProTankiAndroid-app.xml",
+  "mainClass": "ProTankiAndroid",
+  "airOptions": {
+    "android": {
+      "output": "bin/protanki-android.apk",
+      "signingOptions": {
+        "storetype": "pkcs12",
+        "keystore": "certs/android_certificate.p12"
+      }
+    },
+    "files": [
+      {
+        "file": "icons/icon_96.png",
+        "path": "icons/icon_96.png"
+      },
+      {
+        "file": "icons/icon_144.png",
+        "path": "icons/icon_144.png"
+      },
+      {
+        "file": "icons/icon_192.png",
+        "path": "icons/icon_192.png"
+      }
+    ]
+  },
+  "additionalOptions": []
+}

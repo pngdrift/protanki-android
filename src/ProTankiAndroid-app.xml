@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/51.2">
+  <id>protanki-android</id>
+  <versionNumber>0.1.0</versionNumber>
+  <versionLabel>0.1.0</versionLabel>
+  <supportedProfiles>mobileDevice</supportedProfiles>
+  <filename>ProTankiAndroid</filename>
+  <name>ProTanki Android</name>
+  <description>ProTanki launcher on Android</description>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-feature android:required="true" android:name="android.hardware.touchscreen.multitouch" />
+</manifest>]]></manifestAdditions>
+    <buildArchitectures>armv7,armv8,x64</buildArchitectures>
+    <displayCutoutMode>always</displayCutoutMode>
+  </android>
+  <initialWindow>
+    <title>ProTanki</title>
+    <content></content>
+    <visible>true</visible>
+    <fullScreen>true</fullScreen>
+    <autoOrients>false</autoOrients>
+    <aspectRatio>landscape</aspectRatio>
+    <renderMode>direct</renderMode>
+    <depthAndStencil>true</depthAndStencil>
+    <systemChrome>standard</systemChrome>
+  </initialWindow>
+  <icon>
+    <image96x96>icons/icon_96.png</image96x96>
+    <image144x144>icons/icon_144.png</image144x144>
+    <image192x192>icons/icon_192.png</image192x192>
+  </icon>
+  <supportedLanguages>en ru pt</supportedLanguages>
+</application>
