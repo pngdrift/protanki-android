@@ -66,6 +66,7 @@ package {
 
     private function cleanupUrlloader():void {
       clearTimeout(timeoutId);
+      urlloader.close();
       urlloader.removeEventListener(IOErrorEvent.IO_ERROR,onLoadingError);
       urlloader.removeEventListener(SecurityErrorEvent.SECURITY_ERROR,onLoadingError);
       urlloader.removeEventListener(Event.COMPLETE,onUrlloaderComplete);
