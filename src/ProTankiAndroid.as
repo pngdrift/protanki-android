@@ -1,11 +1,12 @@
 package {
+  import controls.TextLabel;
   import flash.desktop.NativeApplication;
   import flash.display.*;
   import flash.events.*;
   import flash.net.*;
   import flash.system.*;
-  import flash.text.*;
   import flash.utils.*;
+  import lang.t;
 
   public class ProTankiAndroid extends Sprite {
 
@@ -79,12 +80,9 @@ package {
         loadTankiLoader();
       }
       else {
-        var tf:TextField = new TextField();
-        tf.defaultTextFormat = new TextFormat('Tahoma',42,0xCCCCCC);
-        tf.autoSize = TextFieldAutoSize.LEFT;
-        tf.text = 'Loading error';
-        tf.x = tf.y = 50;
-        addChild(tf);
+        var errorLabel:TextLabel = new TextLabel(t('loading_error'),42,0xCCCCCC);
+        errorLabel.x = errorLabel.y = 50;
+        addChild(errorLabel);
       }
     }
 
@@ -95,7 +93,7 @@ package {
           resources: resourceUrl,
           config: resourceUrl + '/config.xml',
           swf: resourceUrl + '/library.swf',
-          lang: getLang()
+          lang: t('_game_locale')
         };
       context.allowCodeImport = true;
       loader.contentLoaderInfo.addEventListener(Event.COMPLETE,onComplete);
@@ -107,21 +105,6 @@ package {
       var contentLoaderInfo:LoaderInfo = event.target as LoaderInfo;
       contentLoaderInfo.removeEventListener(Event.COMPLETE,onComplete);
       addChild(contentLoaderInfo.loader);
-    }
-
-    /**
-     * @return Game localization
-     */
-    private static function getLang():String {
-      switch(Capabilities.language) {
-        case 'ru':
-          return 'ru';
-        case 'pt':
-          return 'pt_BR';
-        case 'en':
-        default:
-          return 'en';
-      }
     }
 
     /**
