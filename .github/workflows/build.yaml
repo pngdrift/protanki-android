@@ -36,7 +36,7 @@ jobs:
       - name: Setup Adobe AIR SDK
         uses: joshtynjala/setup-adobe-air-action@v2
         with:
-          air-version: "51.2.1"
+          air-version: "51.2.2"
           accept-license: true
 
       - name: Install asconfigc
