@@ -51,7 +51,7 @@ package gamepad {
       // stage.addChild(new TextLabel('Gamepad: ' + device.name + '__' + device.id));
     }
 
-    private const deadZone:Number = 0.25;
+    private const deadZone:Number = 0.30;
 
     private function onAxisChange(event:Event):void {
       var control:GameInputControl = event.target as GameInputControl;
@@ -63,8 +63,8 @@ package gamepad {
             simulateKeyPress(true,Keyboard.X);
           }
           else if(control.value < -deadZone) {
-            simulateKeyPress(false,Keyboard.X);
             simulateKeyPress(true,Keyboard.Z);
+            simulateKeyPress(false,Keyboard.X);
           }
           else {
             simulateKeyPress(false,Keyboard.Z);
@@ -74,8 +74,8 @@ package gamepad {
         case mapping.RIGHT_STICK_Y:
           // Camera
           if(control.value > deadZone) {
-            simulateKeyPress(false,Keyboard.PAGE_UP);
             simulateKeyPress(true,Keyboard.PAGE_DOWN);
+            simulateKeyPress(false,Keyboard.PAGE_UP);
           }
           else if(control.value < -deadZone) {
             simulateKeyPress(false,Keyboard.PAGE_DOWN);
@@ -89,11 +89,11 @@ package gamepad {
         case mapping.DPAD_UP:
         case mapping.DPAD_DOWN:
           // Tank forward/backward
-          if(control.value > 0) {
+          if(control.value > 0.01) {
             simulateKeyPress(false,Keyboard.W);
             simulateKeyPress(true,Keyboard.S);
           }
-          else if(control.value < 0) {
+          else if(control.value < -0.01) {
             simulateKeyPress(true,Keyboard.W);
             simulateKeyPress(false,Keyboard.S);
           }
@@ -105,11 +105,11 @@ package gamepad {
         case mapping.DPAD_LEFT:
         case mapping.DPAD_RIGHT:
           // Tank left/right
-          if(control.value > 0) {
+          if(control.value > 0.01) {
             simulateKeyPress(false,Keyboard.A);
             simulateKeyPress(true,Keyboard.D);
           }
-          else if(control.value < 0) {
+          else if(control.value < -0.01) {
             simulateKeyPress(true,Keyboard.A);
             simulateKeyPress(false,Keyboard.D);
           }
@@ -182,7 +182,7 @@ package gamepad {
           break;
         case mapping.Y:
           // Use double armor
-          simulateKeyPress(control.value,Keyboard.NUMBER_4);
+          simulateKeyPress(control.value,Keyboard.NUMBER_2);
           break;
         case mapping.SELECT:
           // Show statistics

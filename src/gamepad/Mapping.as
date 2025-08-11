@@ -78,6 +78,9 @@ package gamepad {
       else if(deviceName.endsWith('Wireless Controller')) {
         setPSMapB();
       }
+      else if(deviceName.startsWith('USB gamepad')) {
+        setSNESMap();
+      }
     }
 
     private function setXboxMapA():void {
@@ -170,6 +173,21 @@ package gamepad {
       LEFT_STICK_Y = axis(1);
       RIGHT_STICK_X = axis(2);
       RIGHT_STICK_Y = axis(5);
+    }
+
+    private function setSNESMap():void {
+      A = button(3);
+      B = button(4);
+      X = button(2);
+      Y = button(5);
+      LT = button(6);
+      RT = button(7)
+      SELECT = button(10);
+      START = button(11);
+      DPAD_UP = axis(1);
+      DPAD_DOWN = axis(1);
+      DPAD_LEFT = axis(0);
+      DPAD_RIGHT = axis(0);
     }
 
     private static function button(id:uint):String {
