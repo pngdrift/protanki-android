@@ -30,3 +30,9 @@ Launcher to start [ProTanki](http://pro-tanki.com) on Android devices using Adob
 | Drop Flag           | Right Bumper (RB / R1)   |
 | Self-destruct       | Left Trigger (LT / L2)   |
 | View the statistics | Select                   |
+
+## 📱 Minimum System Requirements
+
+- **Android version**: 5.1 or higher
+- **RAM**: 1 GB  
+- **Storage**: 300 MB free space

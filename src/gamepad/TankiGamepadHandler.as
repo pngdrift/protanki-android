@@ -82,8 +82,8 @@ package gamepad {
             simulateKeyPress(true,Keyboard.PAGE_UP);
           }
           else {
-            simulateKeyPress(false,Keyboard.PAGE_UP);
             simulateKeyPress(false,Keyboard.PAGE_DOWN);
+            simulateKeyPress(false,Keyboard.PAGE_UP);
           }
           break;
         case mapping.DPAD_UP:
