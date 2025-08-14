@@ -1,6 +1,7 @@
 # ProTankiAndroid
 
 ![Logo](icons/icon_96.png)
+[![Version Badge](https://img.shields.io/github/v/release/pngdrift/protanki-android?style=plastic)](https://github.com/pngdrift/protanki-android/releases/latest)
 
 Launcher to start [ProTanki](http://pro-tanki.com) on Android devices using Adobe AIR.
 
@@ -35,4 +36,4 @@ Launcher to start [ProTanki](http://pro-tanki.com) on Android devices using Adob
 
 - **Android version**: 5.1 or higher
 - **RAM**: 1 GB  
-- **Storage**: 300 MB free space
+- **Storage**: 400 MB available space
