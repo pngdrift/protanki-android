@@ -78,6 +78,9 @@ package gamepad {
       else if(deviceName.endsWith('Wireless Controller')) {
         setPSMapB();
       }
+      else if(deviceName.startsWith('Logitech')) {
+        setLogitechMap();
+      }
       else if(deviceName.startsWith('USB gamepad')) {
         setSNESMap();
       }
@@ -175,13 +178,36 @@ package gamepad {
       RIGHT_STICK_Y = axis(5);
     }
 
+    private function setLogitechMap():void {
+      A = button(9);
+      B = button(10);
+      X = button(8);
+      Y = button(11);
+      LB = button(12);
+      RB = button(13);
+      LT = button(14);
+      RT = button(15);
+      SELECT = button(16);
+      START = button(17);
+      L3 = button(18);
+      R3 = button(19);
+      DPAD_UP = button(4);
+      DPAD_DOWN = button(5);
+      DPAD_LEFT = button(6);
+      DPAD_RIGHT = button(7);
+      LEFT_STICK_X = axis(0);
+      LEFT_STICK_Y = axis(1);
+      RIGHT_STICK_X = axis(2);
+      RIGHT_STICK_Y = axis(3);
+    }
+
     private function setSNESMap():void {
       A = button(3);
       B = button(4);
       X = button(2);
       Y = button(5);
       LT = button(6);
-      RT = button(7)
+      RT = button(7);
       SELECT = button(10);
       START = button(11);
       DPAD_UP = axis(1);
