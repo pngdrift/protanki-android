@@ -66,7 +66,8 @@ package gamepad {
     public var RIGHT_STICK_Y:String;
 
     public function Mapping(deviceName:String,deviceId:String) {
-      if(deviceName == 'Xbox Wireless Controller' || deviceName == 'Microsoft X-Box 360 pad') {
+      if(deviceName == 'Xbox Wireless Controller' || deviceName == 'Microsoft X-Box 360 pad'
+          || deviceName == 'Wireless Controller Touchpad') {
         setXboxMapA();
       }
       else if(deviceName.startsWith('Xbox') || deviceId.startsWith('XINPUT')) {
