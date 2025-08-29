@@ -6,7 +6,8 @@
     ],
     "library-path": [],
     "default-background-color": "#000000",
-    "output": "bin/protanki-android.swf"
+    "output": "bin/protanki-android.swf",
+    "creator": "pngdrift"
   },
   "application": "src/ProTankiAndroid-app.xml",
   "mainClass": "ProTankiAndroid",
