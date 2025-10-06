@@ -67,7 +67,7 @@ package gamepad {
 
     public function Mapping(deviceName:String,deviceId:String) {
       if(deviceName == 'Xbox Wireless Controller' || deviceName == 'Microsoft X-Box 360 pad'
-          || deviceName == 'Wireless Controller Touchpad' || deviceName == "Gamepad") {
+          || deviceName == 'Wireless Controller Touchpad' || deviceName == 'Gamepad') {
         setXboxMapA();
       }
       else if(deviceName.startsWith('Xbox') || deviceId.startsWith('XINPUT')) {
@@ -86,7 +86,7 @@ package gamepad {
         setSNESMap();
       }
       else {
-        trace('Device not recognized, using default map');
+        trace('Device','"' + deviceName + '"','not recognized, using default map');
         setXboxMapA();
       }
     }
@@ -221,10 +221,12 @@ package gamepad {
       DPAD_RIGHT = axis(0);
     }
 
+    [Inline]
     private static function button(id:uint):String {
       return 'BUTTON_' + id.toString();
     }
 
+    [Inline]
     private static function axis(id:uint):String {
       return 'AXIS_' + id.toString();
     }

@@ -25,6 +25,7 @@ package lang {
       en: include 'texts/en.jsonc'
     };
 
+    [Inline]
     internal static function getText(key:String):String {
       var langSet:Object = texts[langCode];
       return langSet[key] || ('@{' + key + '}@');
