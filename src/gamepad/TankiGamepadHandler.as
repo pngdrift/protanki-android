@@ -59,63 +59,63 @@ package gamepad {
         case mapping.RIGHT_STICK_X:
           // Turret rotation
           if(control.value > deadZone) {
-            simulateKeyPress(false,Keyboard.Z);
-            simulateKeyPress(true,Keyboard.X);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.Z);
+            KeyUtil.simulateKeyPress(stage,true,Keyboard.X);
           }
           else if(control.value < -deadZone) {
-            simulateKeyPress(true,Keyboard.Z);
-            simulateKeyPress(false,Keyboard.X);
+            KeyUtil.simulateKeyPress(stage,true,Keyboard.Z);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.X);
           }
           else {
-            simulateKeyPress(false,Keyboard.Z);
-            simulateKeyPress(false,Keyboard.X);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.Z);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.X);
           }
           break;
         case mapping.RIGHT_STICK_Y:
           // Camera
           if(control.value > deadZone) {
-            simulateKeyPress(true,Keyboard.PAGE_DOWN);
-            simulateKeyPress(false,Keyboard.PAGE_UP);
+            KeyUtil.simulateKeyPress(stage,true,Keyboard.PAGE_DOWN);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.PAGE_UP);
           }
           else if(control.value < -deadZone) {
-            simulateKeyPress(false,Keyboard.PAGE_DOWN);
-            simulateKeyPress(true,Keyboard.PAGE_UP);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.PAGE_DOWN);
+            KeyUtil.simulateKeyPress(stage,true,Keyboard.PAGE_UP);
           }
           else {
-            simulateKeyPress(false,Keyboard.PAGE_DOWN);
-            simulateKeyPress(false,Keyboard.PAGE_UP);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.PAGE_DOWN);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.PAGE_UP);
           }
           break;
         case mapping.DPAD_UP:
         case mapping.DPAD_DOWN:
           // Tank forward/backward
           if(control.value > 0.01) {
-            simulateKeyPress(false,Keyboard.W);
-            simulateKeyPress(true,Keyboard.S);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.W);
+            KeyUtil.simulateKeyPress(stage,true,Keyboard.S);
           }
           else if(control.value < -0.01) {
-            simulateKeyPress(true,Keyboard.W);
-            simulateKeyPress(false,Keyboard.S);
+            KeyUtil.simulateKeyPress(stage,true,Keyboard.W);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.S);
           }
           else {
-            simulateKeyPress(false,Keyboard.W);
-            simulateKeyPress(false,Keyboard.S);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.W);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.S);
           }
           break;
         case mapping.DPAD_LEFT:
         case mapping.DPAD_RIGHT:
           // Tank left/right
           if(control.value > 0.01) {
-            simulateKeyPress(false,Keyboard.A);
-            simulateKeyPress(true,Keyboard.D);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.A);
+            KeyUtil.simulateKeyPress(stage,true,Keyboard.D);
           }
           else if(control.value < -0.01) {
-            simulateKeyPress(true,Keyboard.A);
-            simulateKeyPress(false,Keyboard.D);
+            KeyUtil.simulateKeyPress(stage,true,Keyboard.A);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.D);
           }
           else {
-            simulateKeyPress(false,Keyboard.A);
-            simulateKeyPress(false,Keyboard.D);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.A);
+            KeyUtil.simulateKeyPress(stage,false,Keyboard.D);
           }
           break;
         case mapping.RT:
@@ -130,74 +130,69 @@ package gamepad {
       switch(control.id) {
         case mapping.RT:
           // Shoot
-          simulateKeyPress(control.value,Keyboard.SPACE);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.SPACE);
           break;
         case mapping.LT:
           // Seld-destruct
-          simulateKeyPress(control.value > 0.66,Keyboard.DELETE);
+          KeyUtil.simulateKeyPress(stage,control.value > 0.66,Keyboard.DELETE);
           break;
         case mapping.R3:
           // Center turret
-          simulateKeyPress(control.value,Keyboard.C);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.C);
           break;
         case mapping.L3:
           // Open battle chat
-          simulateKeyPress(control.value,Keyboard.ENTER);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.ENTER);
           break;
         case mapping.DPAD_UP:
           // Tank forward
-          simulateKeyPress(control.value,Keyboard.W);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.W);
           break;
         case mapping.DPAD_DOWN:
           // Tank backward
-          simulateKeyPress(control.value,Keyboard.S);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.S);
           break;
         case mapping.DPAD_LEFT:
           // Tank left
-          simulateKeyPress(control.value,Keyboard.A);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.A);
           break;
         case mapping.DPAD_RIGHT:
           // Tank right
-          simulateKeyPress(control.value,Keyboard.D);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.D);
           break;
         case mapping.RB:
           // Drop flag
-          simulateKeyPress(control.value,Keyboard.F);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.F);
           break;
         case mapping.LB:
           // Use medkit
-          simulateKeyPress(control.value,Keyboard.NUMBER_1);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.NUMBER_1);
           break;
         case mapping.A:
           // Use double damage
-          simulateKeyPress(control.value,Keyboard.NUMBER_3);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.NUMBER_3);
           break;
         case mapping.B:
           // Use nitro
-          simulateKeyPress(control.value,Keyboard.NUMBER_4);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.NUMBER_4);
           break;
         case mapping.X:
           // Drop mine
-          simulateKeyPress(control.value,Keyboard.NUMBER_5);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.NUMBER_5);
           break;
         case mapping.Y:
           // Use double armor
-          simulateKeyPress(control.value,Keyboard.NUMBER_2);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.NUMBER_2);
           break;
         case mapping.SELECT:
           // Show statistics
-          simulateKeyPress(control.value,Keyboard.TAB);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.TAB);
           break;
         case mapping.START:
           // Pause
-          simulateKeyPress(control.value,Keyboard.P);
+          KeyUtil.simulateKeyPress(stage,control.value,Keyboard.P);
           break;
       }
-    }
-
-    private function simulateKeyPress(keyDown:Boolean,keyCodeValue:uint):void {
-      var keyEventType:String = keyDown ? KeyboardEvent.KEY_DOWN : KeyboardEvent.KEY_UP;
-      stage.dispatchEvent(new KeyboardEvent(keyEventType,true,false,0,keyCodeValue));
     }
 
   }
