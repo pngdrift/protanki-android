@@ -3,6 +3,7 @@ on:
   push:
     paths-ignore:
       - "README.md"
+      - ".gitattributes"
 
 jobs:
   build:
