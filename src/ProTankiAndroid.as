@@ -72,6 +72,7 @@ package {
       urlloader.close();
       urlloader.removeEventListener(IOErrorEvent.IO_ERROR,onLoadingError);
       urlloader.removeEventListener(SecurityErrorEvent.SECURITY_ERROR,onLoadingError);
+      urlloader.removeEventListener(ProgressEvent.PROGRESS,onProgress);
       urlloader.removeEventListener(Event.COMPLETE,onUrlloaderComplete);
       urlloader = null;
     }
