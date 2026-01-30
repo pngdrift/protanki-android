@@ -6,10 +6,11 @@ package lang {
     private static var langCode:String = getLangCode();
 
     private static function getLangCode():String {
-      switch(Capabilities.language) {
+      var capabilitiesLang:String = Capabilities.language;
+      switch(capabilitiesLang) {
         case 'ru':
         case 'pt':
-          return Capabilities.language;
+          return capabilitiesLang;
         case 'en':
           var langTag:String = Capabilities.languages[0];
           return langTag == 'uk-UA' ? 'ua' : 'en';
