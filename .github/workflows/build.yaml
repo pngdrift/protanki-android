@@ -38,7 +38,7 @@ jobs:
       - name: Setup Adobe AIR SDK
         uses: joshtynjala/setup-adobe-air-action@v2
         with:
-          air-version: "51.2.2"
+          air-version: "51.3"
           accept-license: true
 
       - name: Install asconfigc
@@ -61,10 +61,11 @@ jobs:
         timeout-minutes: 1
 
       - name: Upload APK
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: protanki-android-${{ matrix.tag }}
           path: bin/*.apk
+          archive: false
 
   release:
     needs: build
@@ -73,7 +74,7 @@ jobs:
 
     steps:
       - name: Download all APKs
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: dist
 
