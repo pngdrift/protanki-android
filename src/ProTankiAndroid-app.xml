@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/51.2">
+<application xmlns="http://ns.adobe.com/air/application/51.3">
   <id>protanki-android</id>
   <versionNumber>0.3.0</versionNumber>
   <versionLabel>0.3.0-SNAPSHOT</versionLabel>
@@ -45,4 +45,7 @@
     <image192x192>icons/icon_192.png</image192x192>
   </icon>
   <supportedLanguages>en ru pt</supportedLanguages>
+  <systemConfig>
+    <stackOverflowChecks>never</stackOverflowChecks>
+  </systemConfig>
 </application>
