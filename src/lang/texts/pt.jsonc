@@ -1,4 +1,9 @@
 {
+  "drag_buttons_hint": "Os elementos de controle podem ser arrastados",
+  "reset_buttons_position": "Restaurar posição",
+  "settings_button_opacity": "Opacidade do botão de configurações",
+  "show_controls": "Mostrar botões de controle",
+  "settings": "Configurações",
   "loading_error": "Erro de Download",
   "_game_locale": "pt_BR"
 }

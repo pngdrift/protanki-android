@@ -1,4 +1,9 @@
 {
+  "drag_buttons_hint": "Елементи керування можна перетягувати",
+  "reset_buttons_position": "Відновити розташування",
+  "settings_button_opacity": "Прозорість кнопки налаштувань",
+  "show_controls": "Показувати кнопки керування",
+  "settings": "Налаштування",
   "loading_error": "Помилка завантаження",
   "_game_locale": "ua"
 }

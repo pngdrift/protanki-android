@@ -6,6 +6,12 @@
     ],
     "library-path": [],
     "default-background-color": "#000000",
+    "define": [
+      {
+        "name": "Feature::on_screen_controls",
+        "value": true
+      }
+    ],
     "output": "bin/protanki-android.swf",
     "creator": "pngdrift"
   },

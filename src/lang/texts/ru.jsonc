@@ -1,4 +1,9 @@
 {
+  "drag_buttons_hint": "Элементы управления можно перетаскивать",
+  "reset_buttons_position": "Восстановить расположение",
+  "settings_button_opacity": "Прозрачность кнопки настройки",
+  "show_controls": "Показывать кнопки для управления",
+  "settings": "Настройки",
   "loading_error": "Ошибка загрузки",
   "_game_locale": "ru"
 }

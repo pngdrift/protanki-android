@@ -1,4 +1,5 @@
 package {
+  import controls.OnScreenControlsLayer;
   import controls.TextLabel;
   import flash.desktop.NativeApplication;
   import flash.display.*;
@@ -108,6 +109,10 @@ package {
       var contentLoaderInfo:LoaderInfo = event.target as LoaderInfo;
       contentLoaderInfo.removeEventListener(Event.COMPLETE,onComplete);
       addChild(contentLoaderInfo.loader);
+
+      Feature::on_screen_controls {
+        stage.addChild(new OnScreenControlsLayer());
+      }
     }
 
     /**

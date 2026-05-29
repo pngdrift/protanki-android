@@ -1,4 +1,9 @@
 {
+  "drag_buttons_hint": "Drag buttons to reposition",
+  "reset_buttons_position": "Reset buttons position",
+  "settings_button_opacity": "Settings button opacity",
+  "show_controls": "Show controls buttons",
+  "settings": "Settings",
   "loading_error": "Loading error",
   "_game_locale": "en"
 }
