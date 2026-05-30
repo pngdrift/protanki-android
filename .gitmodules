@@ -1,0 +1,4 @@
+[submodule "libs/Toast-ANE"]
+	path = libs/Toast-ANE
+	url = https://github.com/pngdrift/Toast-ANE.git
+	ignore = dirty

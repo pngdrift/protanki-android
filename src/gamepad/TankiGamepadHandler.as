@@ -1,5 +1,5 @@
 package gamepad {
-  import controls.TextLabel;
+  import com.aratush.ane.toast.ToastExtension;
   import flash.display.Stage;
   import flash.events.Event;
   import flash.events.GameInputEvent;
@@ -48,7 +48,11 @@ package gamepad {
           control.addEventListener(Event.CHANGE,onAxisChange);
         }
       }
-      // stage.addChild(new TextLabel('Gamepad: ' + device.name + '__' + device.id));
+      if(ToastExtension.isSupported) {
+        var toast:ToastExtension = new ToastExtension();
+        toast.setText(device.name + ' connected');
+        toast.show();
+      }
     }
 
     private const deadZone:Number = 0.30;

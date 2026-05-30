@@ -5,6 +5,9 @@
       "src"
     ],
     "library-path": [],
+    "external-library-path": [
+      "libs/Toast-ANE/ane/bin/Toast.ane"
+    ],
     "default-background-color": "#000000",
     "define": [
       {
@@ -25,6 +28,9 @@
         "keystore": "certs/android_certificate.p12"
       }
     },
+    "extdir": [
+      "libs/Toast-ANE/ane/bin/"
+    ],
     "files": [
       {
         "file": "icons/icon_96.png",
