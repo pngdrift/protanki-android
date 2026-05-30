@@ -48,4 +48,7 @@
   <systemConfig>
     <stackOverflowChecks>never</stackOverflowChecks>
   </systemConfig>
+  <extensions>
+	  <extensionID>com.aratush.ane.Toast</extensionID>
+  </extensions>
 </application>
