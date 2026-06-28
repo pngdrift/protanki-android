@@ -49,7 +49,7 @@ jobs:
           asconfigc --version
 
       - name: Restore keystore
-        run: mkdir certs && echo "${{ secrets.CERT_BASE64 }}" | base64 --decode > certs/android_certificate.p12
+        run: echo "${{ secrets.CERT_BASE64 }}" | base64 --decode > certs/android_certificate.p12
 
       - name: Get versionLabel
         id: getv
