@@ -3,7 +3,7 @@
 ![Logo](icons/icon_96.png)
 [![Version Badge](https://img.shields.io/github/v/release/pngdrift/protanki-android?style=plastic)](https://github.com/pngdrift/protanki-android/releases/latest)
 
-Launcher to start [ProTanki](http://pro-tanki.com) on Android devices using Adobe AIR.
+Launcher to start [ProTanki](https://pro-tanki.online) on Android devices using Adobe AIR.
 
 > [!NOTE]  
 > There are no on-screen controls yet, so you’ll need a physical keyboard to play battles.
@@ -37,3 +37,23 @@ Launcher to start [ProTanki](http://pro-tanki.com) on Android devices using Adob
 - **Android version**: 5.1 or higher
 - **RAM**: 1 GB  
 - **Storage**: 400 MB available space
+
+## 📲 Download
+
+Download the latest APK from the [Releases](https://github.com/pngdrift/protanki-android/releases/latest) page.
+
+## 🛠️ Building from source
+
+### Prerequisites
+- Download and install [AIR SDK](https://airsdk.dev/docs/basics/getting-started).
+- Install [asconfigc](https://github.com/BowlerHatLLC/asconfigc/blob/main/README.md).
+- Generate a certificate (see [certs/README.md](certs/README.md)).
+
+### Build
+Use the following command to build APK:
+```
+asconfigc --sdk-path %AIR_HOME% --air android
+```
+
+You will be prompted for the certificate password during the build process.
+
