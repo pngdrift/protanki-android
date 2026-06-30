@@ -16,7 +16,7 @@ package controls {
     private var showControlsCheckbox:Checkbox;
 
     public function SettingsMenu(button:SettingsButton,touchControls:OnScreenControlsLayer) {
-      this.settingsButton = settingsButton;
+      this.settingsButton = button;
       this.onScreenControls = touchControls;
       createUI();
       loadSettings();
