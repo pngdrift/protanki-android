@@ -1,4 +1,5 @@
 package {
+  import com.aratush.ane.toast.ToastExtension;
   import controls.OnScreenControlsLayer;
   import controls.TextLabel;
   import flash.desktop.NativeApplication;
@@ -40,6 +41,23 @@ package {
       stage.align = StageAlign.TOP_LEFT;
       new TankiGamepadHandler(stage).init();
       loadTankiLoader();
+      checkInstalledAPK();
+    }
+
+    private function checkInstalledAPK():void {
+      if(!Capabilities.supports64BitProcesses) {
+        return;
+      }
+      var descriptor:XML = NativeApplication.nativeApplication.applicationDescriptor;
+      var ns:Namespace = descriptor.namespace ();
+      var buildArch:String = descriptor.ns::android.ns::buildArchitectures;
+      if(buildArch.startsWith("armv7")) {
+        if(ToastExtension.isSupported) {
+          var toast:ToastExtension = new ToastExtension();
+          toast.setText(t('abi_mismatch_warning'));
+          toast.show();
+        }
+      }
     }
 
     private function loadTankiLoader():void {

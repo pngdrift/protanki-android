@@ -1,4 +1,5 @@
 {
+  "abi_mismatch_warning": "Versão armeabi-v7a, recomendado arm64-v8a",
   "drag_buttons_hint": "Os elementos de controle podem ser arrastados",
   "reset_buttons_position": "Restaurar posição",
   "settings_button_opacity": "Opacidade do botão de configurações",

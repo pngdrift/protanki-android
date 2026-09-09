@@ -1,4 +1,5 @@
 {
+  "abi_mismatch_warning": "For better performance, please install arm64-v8a version",
   "drag_buttons_hint": "Drag buttons to reposition",
   "reset_buttons_position": "Reset buttons position",
   "settings_button_opacity": "Settings button opacity",

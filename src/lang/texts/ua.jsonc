@@ -1,4 +1,5 @@
 {
+  "abi_mismatch_warning": "Версія armeabi-v7a, рекомендовано arm64-v8a",
   "drag_buttons_hint": "Елементи керування можна перетягувати",
   "reset_buttons_position": "Відновити розташування",
   "settings_button_opacity": "Прозорість кнопки налаштувань",
