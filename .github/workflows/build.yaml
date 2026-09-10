@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-26.04
+    runs-on: windows-latest
 
     strategy:
       matrix:
@@ -49,13 +49,16 @@ jobs:
           asconfigc --version
 
       - name: Restore keystore
+        shell: bash
         run: echo "${{ secrets.CERT_BASE64 }}" | base64 --decode > certs/android_certificate.p12
 
       - name: Get versionLabel
+        shell: bash
         id: getv
         run: echo "label=$(awk -F'[<>]' '/<versionLabel>/{print $3}' src/ProTankiAndroid-app.xml)" >> $GITHUB_OUTPUT
 
       - name: Build ${{ matrix.arch }}
+        shell: bash
         run: |
           sed -i "s|<buildArchitectures>.*</buildArchitectures>|<buildArchitectures>${{ matrix.arch }}</buildArchitectures>|" src/ProTankiAndroid-app.xml
           asconfigc --verbose --sdk $AIR_HOME --air android --storepass ${{ secrets.CERT_PASS }}
