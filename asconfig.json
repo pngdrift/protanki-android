@@ -11,6 +11,10 @@
     "default-background-color": "#000000",
     "define": [
       {
+        "name": "Feature::gamepad_controls",
+        "value": true
+      },
+      {
         "name": "Feature::on_screen_controls",
         "value": true
       }

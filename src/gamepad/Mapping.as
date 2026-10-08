@@ -1,5 +1,6 @@
 package gamepad {
 
+  Feature::gamepad_controls
   internal class Mapping {
 
     /**

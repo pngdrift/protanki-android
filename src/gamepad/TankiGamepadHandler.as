@@ -3,12 +3,12 @@ package gamepad {
   import flash.display.Stage;
   import flash.events.Event;
   import flash.events.GameInputEvent;
-  import flash.events.KeyboardEvent;
   import flash.ui.GameInput;
   import flash.ui.GameInputControl;
   import flash.ui.GameInputDevice;
   import flash.ui.Keyboard;
 
+  Feature::gamepad_controls
   public class TankiGamepadHandler {
 
     private var stage:Stage;
